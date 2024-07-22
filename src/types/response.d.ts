@@ -12,4 +12,4 @@ export interface IResponseError {
 }
 
 // export RMessage = Record
-export type TSuccessMessage = Record<'get' | 'post' | 'update' | 'delete', (title: string) => string>
+export type TSuccessMessage = Record<'get' | 'post' | 'update' | 'delete', (title: string, data: any) => IResponseSuccess>

@@ -4,6 +4,7 @@ import db from './models'
 
 // ? Routes
 import statusRouter from './routes/statuses'
+import doctorRouter from './routes/doctor'
 
 require('dotenv').config()
 
@@ -20,6 +21,7 @@ db.sequelize.sync().then(() => {
 const PORT = process.env.PORT
 app.use(express.json())
 app.use('/api', statusRouter)
+app.use('/api', doctorRouter)
 
 // Define a route for the root path ('/')
 app.get('/', (req, res) => {
